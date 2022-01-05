@@ -1,6 +1,9 @@
 package hexel
 
-import "image/color"
+import (
+	"fmt"
+	"image/color"
+)
 
 func ColorToPx(c color.Color) Pixel {
 	r, g, b, a := c.RGBA()
@@ -10,4 +13,10 @@ func ColorToPx(c color.Color) Pixel {
 		B: uint8(b),
 		A: uint8(a),
 	}
+}
+
+type Palette struct{}
+
+func (p *Palette) Black() {
+	fmt.Println("")
 }
